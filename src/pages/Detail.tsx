@@ -46,7 +46,7 @@ export default function DetailPage() {
 
   return (
     <main className={"px-10 py-8 flex flex-col gap-15"}>
-      <header className="shadow-[0_0_15px_rgba(0,0,0,0.25)] rounded-sm bg-white w-fit hover:scale-[.95] transition-transform duration-300">
+      <header className="shadow-[0_0_15px_rgba(0,0,0,0.25)] rounded-sm bg-white dark:bg-blue-900 w-fit hover:scale-[.95] transition-transform duration-300">
         <Button
           size="icon"
           aria-label="Submit"
@@ -60,7 +60,11 @@ export default function DetailPage() {
       <article
         className={"grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 lg:gap-12"}
       >
-        <img src={country?.flags.svg} alt={country?.flags.alt} className={""} />
+        <img
+          src={country?.flags.svg}
+          alt={country?.flags.alt}
+          className={"max-h-120"}
+        />
         <div className={"flex flex-col gap-8 lg:px-4 lg:py-5 xl:gap-14"}>
           <h1 className={"text-xl md:text-2xl font-extrabold"}>
             {country?.name.common}
@@ -122,7 +126,7 @@ export default function DetailPage() {
                   to={`/country/${border.commonName.toLowerCase()}`}
                   key={border.code}
                   className={
-                    "shadow-[0_0_15px_rgba(0,0,0,0.25)] rounded-sm py-2 bg-white dark:bg-gray-800 text-sm hover:scale-[.95] transition-transform duration-300"
+                    "shadow-[0_0_15px_rgba(0,0,0,0.25)] rounded-sm py-2 bg-white dark:bg-blue-900 text-sm hover:scale-[.95] transition-transform duration-300"
                   }
                 >
                   {border.commonName}

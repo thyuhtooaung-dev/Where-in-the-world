@@ -21,7 +21,7 @@ export default function SearchBar() {
   );
 
   return (
-    <Command className="w-full md:max-w-130 rounded-md px-4 py-3 shadow-md">
+    <Command className="relative w-full md:max-w-130 rounded-md px-4 py-3 shadow-md dark:bg-blue-900 overflow-visible">
       <CommandInput
         placeholder="Search for a country..."
         value={value}
@@ -31,24 +31,23 @@ export default function SearchBar() {
       />
 
       {open && debouncedValue && (
-        <CommandList className={"mt-2 max-h-none overflow-visible"}>
-          {filteredCountries?.slice(0, 10).map((c) => (
-            <CommandItem
-              key={c.name.common}
-              value={c.name.common}
-              onSelect={() => {
-                navigate(`/country/${c.name.common}`);
-                setOpen(false);
-                setValue("");
-              }}
-              className={
-                "font-medium text-base cursor-pointer hover:bg-gray-100 transition-colors duration-300"
-              }
-            >
-              {c.name.common}
-            </CommandItem>
-          ))}
-        </CommandList>
+        <div className="absolute left-0 top-full z-50 mt-2 w-full">
+          <CommandList className="max-h-[300px] overflow-y-auto no-scrollbar rounded-md bg-white shadow-xl dark:bg-blue-900">
+            {filteredCountries?.slice(0, 10).map((c) => (
+              <CommandItem
+                key={c.name.common}
+                onSelect={() => {
+                  navigate(`/country/${c.name.common.toLowerCase()}`);
+                  setOpen(false);
+                  setValue("");
+                }}
+                className="font-medium text-base cursor-pointer hover:bg-gray-100 dark:hover:bg-blue-950 transition-colors duration-300"
+              >
+                {c.name.common}
+              </CommandItem>
+            ))}
+          </CommandList>
+        </div>
       )}
     </Command>
   );

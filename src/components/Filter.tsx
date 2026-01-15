@@ -15,7 +15,7 @@ export default function Filter({ onChange }: FilterProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <div className="flex items-center shadow-md rounded-md overflow-hidden w-50 h-15 justify-between cursor-pointer">
+        <div className="dark:bg-blue-900 flex items-center shadow-md rounded-md overflow-hidden w-50 h-15 justify-between cursor-pointer">
           <span className="px-7 py-5 text-sm select-none">
             Filter by Region
           </span>
@@ -32,7 +32,7 @@ export default function Filter({ onChange }: FilterProps) {
 
       <DropdownMenuContent
         align="start"
-        className="w-50 border-none px-4 py-3 bg-white font-medium"
+        className="w-50 border-none px-4 py-3 bg-white dark:bg-blue-900 font-medium "
       >
         <DropdownMenuItem onClick={() => onChange("Africa")}>
           Africa

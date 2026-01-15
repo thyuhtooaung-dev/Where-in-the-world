@@ -23,7 +23,7 @@ export default function Card({
     <Link to={`/country/${name}`}>
       <div
         className={
-          " flex flex-col rounded-md overflow-hidden bg-gray-50 shadow-md hover:shadow-lg cursor-pointer active:scale-[.95] transition duration-300"
+          " flex flex-col rounded-md overflow-hidden bg-gray-50 dark:bg-blue-900 shadow-md hover:shadow-lg cursor-pointer active:scale-[.95] transition-shadow duration-300"
         }
       >
         <div className={"h-47.5"}>

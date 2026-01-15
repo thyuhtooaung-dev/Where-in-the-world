@@ -5,7 +5,6 @@ export const countryKeys = {
   all: ["countries"] as const,
 };
 
-// 2. The Hook
 export const useCountries = () => {
   return useQuery<Country[]>({
     queryKey: countryKeys.all,
