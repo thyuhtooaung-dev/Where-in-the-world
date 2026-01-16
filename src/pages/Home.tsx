@@ -34,7 +34,7 @@ export default function Home() {
       <div className={"px-4 py-6"}>
         <section
           className={
-            " w-full flex flex-col md:flex-row justify-between gap-10 md:gap-0"
+            " w-full flex flex-col md:flex-row justify-between gap-10 md:gap-5 md:px-8"
           }
         >
           <SearchBar />
