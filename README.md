@@ -46,14 +46,13 @@ Users should be able to:
 - [Tailwindcss](https://tailwindcss.com/)
 - [ShadCN](https://ui.shadcn.com/)
 
-## Continued Development
+### Continued Development
 
 In the future, I plan to improve this project with the following features:
 
 - Add a Google Maps feature for every country
 - Make the cards smoother using Motion.dev animations
 - Add a "Back to Top" button for mobile devices so users can return to the top without scrolling
-
 
 ### Useful resources
 
