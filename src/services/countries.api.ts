@@ -23,8 +23,7 @@ export type Country = {
 };
 
 export const getCountries = async (): Promise<Country[]> => {
-  const response = await api.get<Country[]>(
-    "/all?fields=name,flags,region,capital,population,cca3",
-  );
+  const endpointFields = import.meta.env.VITE_COUNTRIES_API_FIELDS;
+  const response = await api.get<Country[]>(`${endpointFields}`);
   return response.data;
 };

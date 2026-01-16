@@ -1,10 +1,10 @@
 import { ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button.tsx";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { useCountries } from "@/hooks/useCountries.ts";
-import { useCountryDetail } from "@/hooks/useCountryDetail.ts";
 import { useMemo } from "react";
 import { FourSquare } from "react-loading-indicators";
+import { Button } from "@/components/ui/button.tsx";
+import { useCountries } from "@/hooks/useCountries.ts";
+import { useCountryDetail } from "@/hooks/useCountryDetail.ts";
 
 export default function DetailPage() {
   const { data: allCountries } = useCountries();

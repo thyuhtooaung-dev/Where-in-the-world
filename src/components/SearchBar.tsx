@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import {
   Command,
   CommandInput,
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
-import { useState } from "react";
 import useDebounce from "@/hooks/useDebounce.ts";
 import { useCountries } from "@/hooks/useCountries.ts";
 
@@ -32,7 +32,7 @@ export default function SearchBar() {
 
       {open && debouncedValue && (
         <div className="absolute left-0 top-full z-50 mt-2 w-full">
-          <CommandList className="max-h-[300px] overflow-y-auto no-scrollbar rounded-md bg-white shadow-xl dark:bg-blue-900">
+          <CommandList className="max-h-75 overflow-y-auto no-scrollbar rounded-md bg-white shadow-xl dark:bg-blue-900">
             {filteredCountries?.slice(0, 10).map((c) => (
               <CommandItem
                 key={c.name.common}

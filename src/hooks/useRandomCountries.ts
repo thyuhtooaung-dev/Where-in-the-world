@@ -7,7 +7,7 @@ export default function useRandomCountries() {
 
   const randomCountries = useMemo(() => {
     if (!allCountries) return [];
-    return getRandomCountries(allCountries, 40);
+    return getRandomCountries(allCountries, 32);
   }, [allCountries]);
 
   return {

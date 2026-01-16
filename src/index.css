@@ -5,12 +5,12 @@
 
 @theme {
     /* ===== Colors ===== */
-    --color-blue-900: hsl(209, 23%, 22%); /* Dark mode elements */
-    --color-blue-950: hsl(207, 26%, 17%); /* Dark mode background */
+    --color-blue-900: hsl(209, 23%, 22%);
+    --color-blue-950: hsl(207, 26%, 17%);
 
-    --color-grey-950: hsl(200, 15%, 8%);  /* Light mode text */
-    --color-grey-400: hsl(0, 0%, 50%);    /* Light mode input */
-    --color-grey-50: hsl(0, 0%, 99%);     /* Light mode background */
+    --color-grey-950: hsl(200, 15%, 8%);
+    --color-grey-400: hsl(0, 0%, 50%);
+    --color-grey-50: hsl(0, 0%, 99%);
 
     --font-sans: "Nunito Sans", sans-serif;
 
@@ -44,7 +44,7 @@ body {
         display: none;
     }
     .no-scrollbar {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 }
