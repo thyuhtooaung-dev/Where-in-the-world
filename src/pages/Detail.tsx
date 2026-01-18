@@ -61,10 +61,11 @@ export default function DetailPage() {
         className={"grid grid-cols-1 lg:grid-cols-[40%_60%] gap-8 lg:gap-12"}
       >
         <img
-          src={country?.flags.svg}
-          alt={country?.flags.alt}
-          className={"max-h-120"}
+            src={country?.flags.svg}
+            alt={country?.flags.alt}
+            className="max-h-120 w-auto object-contain"
         />
+
         <div className={"flex flex-col gap-8 lg:px-4 lg:py-5 xl:gap-14"}>
           <h1 className={"text-xl md:text-2xl font-extrabold"}>
             {country?.name.common}
