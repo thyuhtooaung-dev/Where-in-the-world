@@ -1,61 +1,69 @@
-## Table of contents
+# REST Countries API with Color Theme Switching
 
-- [Overview](#overview)
-    - [The challenge](#the-challenge)
-    - [Screenshot](#screenshot)
-    - [Links](#links)
-- [My process](#my-process)
-    - [Built with](#built-with)
-    - [Continued development](#continued-development)
-    - [Useful resources](#useful-resources)
-- [Author](#author)
+A high-performance data visualization application that allows users to explore global geographic data. This project demonstrates advanced filtering logic, dynamic routing for deep-linking, and a robust implementation of dark/light mode using CSS variables and Tailwind CSS.
 
-## Overview
+[Live Demo](https://where-in-the-world-ecru.vercel.app/) | [Source Code](https://github.com/thyuhtooaung-dev/Where-in-the-world)
 
-### The challenge
+## Technical Stack
 
-Users should be able to:
+* **Framework**: React (Vite)
+* **Styling**: Tailwind CSS for utility-first responsive design.
+* **Components**: shadcn/ui for accessible, unstyled primitives.
+* **Routing**: React Router for nested navigation and country-specific detail views.
+* **Data Fetching**: REST Countries API integration with optimized state handling.
 
-- See all countries from the API on the homepage
-- Search for a country using an `input` field
-- Filter countries by region
-- Click on a country to see more detailed information on a separate page
-- Click through to the border countries on the detail page
-- Toggle the color scheme between light and dark mode *(optional)*
+---
 
-### Screenshots
+## Key Features
 
-| Desktop View                                     | Mobile View                                    |
-|--------------------------------------------------|------------------------------------------------|
+### Dynamic Search and Filtering
+
+Implemented a multi-criteria filtering system that allows users to search by country name and filter by geographic region simultaneously. The state management ensures that UI updates are fluid and results are rendered efficiently.
+
+### Responsive Detail Views
+
+Each country has a dedicated detail page that pulls extended data, including native names, currencies, and top-level domains.
+
+### Border Country Navigation
+
+The application parses border country codes into full country names, providing clickable links that allow users to navigate through adjacent nations seamlessly via dynamic route updates.
+
+### Adaptive Theming
+
+A comprehensive Dark Mode implementation that persists user preference and adapts to system settings, ensuring a comfortable viewing experience across different lighting conditions.
+
+---
+
+## Technical Implementation Details
+
+### State Management and Performance
+
+The application minimizes unnecessary re-renders by strategically lifting state for the search and filter components. This ensures that the country grid remains responsive even when handling data for over 250 countries.
+
+### Component Architecture
+
+By utilizing **shadcn/ui**, the project maintains a high standard of accessibility (A11y). Components such as the Search Input and Region Select are fully keyboard-navigable and follow WAI-ARIA patterns.
+
+---
+
+## Visual Overviews
+
+| Desktop View | Mobile View |
+| :--- | :--- |
 | ![Desktop Screenshot](./screenshots/desktop.png) | ![Mobile Screenshot](./screenshots/mobile.png) |
 
-### Links
+---
 
-- Solution URL: [GitHub](https://github.com/thyuhtooaung-dev/Where-in-the-world)
-- Live Site URL: [Vercel](https://where-in-the-world-ecru.vercel.app/)
+## Development Roadmap
 
-## My process
+* **Geospatial Integration**: Integration of the Google Maps JavaScript API to provide interactive map views for each country.
+* **Enhanced Motion**: Implementation of Motion.dev for orchestrated entrance animations and shared layout transitions.
+* **UX Optimization**: Addition of a "Back to Top" navigation utility for mobile users and skeleton loading states for better perceived performance.
 
-### Built with
-
-- [React](https://reactjs.org/)
-- [Tailwindcss](https://tailwindcss.com/)
-- [ShadCN](https://ui.shadcn.com/)
-
-### Continued Development
-
-In the future, I plan to improve this project with the following features:
-
-- Add a Google Maps feature for every country
-- Make the cards smoother using Motion.dev animations
-- Add a "Back to Top" button for mobile devices so users can return to the top without scrolling
-
-### Useful resources
-
-- [shadcn/ui Documentation](https://ui.shadcn.com/docs) – This resource explains how shadcn components are structured and composed. It helped me understand how to customize and extend components instead of treating them as a fixed library.
+---
 
 ## Author
 
-- Github - [Thyu Htoo Aung](https://github.com/thyuhtooaung-dev)
-- Frontend Mentor - [@PoungMont](https://www.frontendmentor.io/profile/thyuhtooaung-dev)
-- X - [@PoungMont](https://x.com/Poung_Mont)
+**Thyu Htoo Aung** [GitHub](https://github.com/thyuhtooaung-dev) | [Frontend Mentor](https://www.frontendmentor.io/profile/thyuhtooaung-dev) | [X / Twitter](https://x.com/Poung_Mont)
+
+---
